@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="media/stars.png" id="stars" alt="">
+        <img src="media/moon.png" id="moon" alt="">
+        <img src="media/mountains_behind.png" id="mountains_behind" alt="">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="media/mountains_front.png" id="mountains_front" alt="">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam officiis explicabo quidem quae tenetur dolorem.
+            Accusantium fugiat nemo voluptatem saepe laborum, dolore commodi nam veritatis repudiandae asperiores
+            consequuntur vel! Maiores facere error placeat laborum hic aliquam aspernatur provident, soluta at eos fuga
+            consequuntur ipsum dolore corrupti eaque accusamus quisquam deleniti perferendis dolores necessitatibus
+            rerum delectus vero eius. Quia, veniam tenetur debitis nostrum corrupti animi dolorum, eaque nobis vero
+            beatae qui itaque repellendus quos iste aperiam voluptatem rerum quaerat unde laborum hic recusandae
+            inventore at similique libero. Odit iusto aliquid nobis voluptates magni debitis similique quia vitae
+            expedita. Quibusdam iste ad adipisci, maxime obcaecati ipsam soluta quae accusantium recusandae nobis. Illum
+            mollitia repudiandae perferendis facilis! Expedita et ipsam quas non ullam hic. Voluptatibus quibusdam
+            aliquid dolor sit iure accusamus magnam reprehenderit, blanditiis velit laudantium nostrum eos totam tempore
+            sapiente nam dolore beatae modi esse ea. Minus repellendus perferendis, modi id accusamus voluptas! Quia
+            esse, vero ut amet voluptas temporibus, odit repudiandae quae commodi, suscipit magnam officia pariatur
+            ipsam animi quos. Saepe corrupti maiores repudiandae quisquam, enim voluptatibus minus eveniet excepturi,
+            commodi quasi, quibusdam dolore expedita architecto? <br><br> Amet quam fugit rem recusandae repudiandae eaque harum
+            quod illo quaerat quas, blanditiis voluptate. Tenetur maxime sit possimus explicabo ipsa commodi nobis quae
+            magnam aperiam, minima, dolorum nemo quidem perspiciatis autem maiores placeat ad, atque a fugiat.
+            Accusantium iusto quia in repellendus quod? Suscipit laboriosam illo cum amet iste quidem sunt minus veniam
+            distinctio esse culpa aliquid saepe veritatis, eos reiciendis tempore dolorum. Culpa natus deserunt error
+            vitae, ab distinctio aut cupiditate nulla adipisci debitis optio fugiat, est placeat, neque ad itaque quia.
+            Magnam expedita sunt, nulla labore nemo recusandae at facere eius maiores mollitia doloremque possimus
+            architecto hic obcaecati tempora. Omnis officiis doloremque voluptatem ipsam suscipit sit fuga eaque
+            eligendi, aperiam sunt.<br><br> Qui nemo eaque sed sunt dignissimos est architecto minima maxime, ex vel illum totam
+            neque molestias porro recusandae deserunt laborum minus laudantium debitis distinctio cupiditate maiores
+            inventore voluptatum at. Cumque itaque cupiditate reprehenderit autem incidunt in aliquid quis enim pariatur
+            aspernatur? Id dolor laboriosam natus! Porro in reiciendis tempore ab voluptate? Ex voluptatibus
+            perferendis, iusto sunt unde dolorem dicta quisquam aliquam aperiam harum? Dicta et dolor ullam expedita
+            debitis fuga beatae nesciunt mollitia inventore repellat est sunt distinctio facilis pariatur, in eos esse
+            rem vero incidunt totam aliquam. Commodi, iure atque? Dolor deserunt totam voluptas voluptate asperiores et
+            labore? Omnis tenetur neque at vitae deleniti laborum doloremque fugit, eaque voluptatem non quidem ipsum et
+            corporis sed libero magni fuga molestiae aliquid quia est eligendi! Odit excepturi officia eligendi nostrum
+            odio laborum iusto ullam omnis harum quod magni consequuntur dolorem ipsa hic, distinctio nisi molestias
+            molestiae magnam explicabo dolor. Voluptas, commodi nostrum. Itaque quasi inventore quod voluptates veniam
+            odio nostrum voluptatibus veritatis omnis alias voluptatem delectus fugiat consequatur, necessitatibus
+            pariatur, dignissimos quia sit sequi illo aut facilis reiciendis, aspernatur nulla exercitationem? Et cumque
+            a error nemo esse incidunt cupiditate molestias rerum, totam laudantium modi adipisci earum nam, odit
+            consequuntur explicabo reprehenderit veniam. Eaque.</p>
+    </div>
+
+</body>
+<script>
+    let stars=document.getElementById('stars');
+    let moon=document.getElementById('moon');
+    let mountains_behind=document.getElementById('mountains_behind');
+    let text=document.getElementById('text');
+    let btn=document.getElementById('btn');
+    let mountains_front=document.getElementById('mountains_front');
+    let header=document.querySelector('header');
+
+    window.addEventListener('scroll',function(){
+        let value=window.scrollY;
+        stars.style.left=value*0.25+'px';
+        moon.style.top=value*1.05+'px';
+        mountains_behind.style.top=value*0.5+'px';
+        mountains_front.style.top=value*0+'px';
+        text.style.marginRight=value*4+'px';
+        text.style.marginTop=value*1.5+'px';
+        btn.style.marginTop=value*1.5+'px';
+        header.style.top=value*0.5+'px';
+    })
+</script>
+
+</html>
